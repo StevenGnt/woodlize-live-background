@@ -10,7 +10,8 @@
     "url": "https://github.com/StevenGnt/woodlize-live-background.git"
   },
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server --inline --hot"
+    "start": "./node_modules/.bin/webpack-dev-server --inline --hot",
+    "build": "./node_modules/.bin/webpack --mode=production"
   },
   "devDependencies": {
     "babel": "^6.23.0",

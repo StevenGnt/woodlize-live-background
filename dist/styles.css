@@ -4,27 +4,23 @@
 }
 
 body {
-  font-family: "PorterBold";
   background-color: black;
-  color: white;
-  font-size: 5em;
-  background-position:center;
+  background-size: cover;
   background-repeat: no-repeat;
-  /* background-size: contain; */
+  transition: background-image 500ms ease-in-out;
 }
 
-#content {
-  display: flex;
-  /*
-  flex-direction: column; */
-  align-items: center;
+.band-name-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
- .pushed {
-  margin: auto;
-} 
 
 #bandName {
+  font-family: "PorterBold";
   text-transform: uppercase;
-  letter-spacing: 0.3em;
+  font-size: 9em;
+  letter-spacing: 0.4em;
+  color: white;
 }

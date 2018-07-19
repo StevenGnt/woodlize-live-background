@@ -4,8 +4,12 @@ const state = {
   currentTrackIndex: 0
 };
 
-const nextTrack = () => state.currentTrackIndex++;
-const prevTrack = () => state.currentTrackIndex--;
+const setCurrentTrackIndex = trackIndex => {
+  state.currentTrackIndex = Math.min(config.tracklist.length - 1, Math.max(0, trackIndex));
+};
+
+const nextTrack = () => setCurrentTrackIndex(state.currentTrackIndex + 1);
+const prevTrack = () => setCurrentTrackIndex(state.currentTrackIndex - 1);
 const getCurrentTrack = () => config.tracklist[state.currentTrackIndex] || config.tracklist[0];
 
 const getBlurValue = (volume, ratio) => volume * ratio;
